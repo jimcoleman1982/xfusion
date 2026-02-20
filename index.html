@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xFusion | Hire Vetted Remote Talent, Save 70-80% vs. US Hires</title>
+  <meta name="description" content="xFusion finds, vets, and places dedicated international team members in ~14 days. Building loyal, happy teams since 2020. $500 refundable deposit to start. Book a discovery call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: #1A7A6D;
+      color: #FAFAF7;
+    }
+
+    :root {
+      --bg-primary: #FAFAF7;
+      --bg-alt: #F2F0EB;
+      --bg-card: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --accent-teal: #1A7A6D;
+      --accent-teal-light: #E8F5F2;
+      --accent-teal-dark: #145F55;
+      --accent-cta: #E8613A;
+      --accent-cta-hover: #D4522D;
+      --accent-cta-light: #FFF0EB;
+      --border-light: #E5E3DE;
+      --border-medium: #D1CFC8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,26,26,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+      --shadow-lg: 0 8px 32px rgba(26,26,26,0.10);
+      --max-width: 1140px;
+      --section-py: 100px;
+      --section-py-mobile: 64px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-teal-dark);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ========================================
+       LAYOUT
+       ======================================== */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--narrow {
+      max-width: 800px;
+    }
+
+    section {
+      padding: var(--section-py) 0;
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 42px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background-color: var(--accent-cta);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(232, 97, 58, 0.25);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--accent-cta-hover);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(232, 97, 58, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      color: var(--accent-teal);
+      border: 2px solid var(--accent-teal);
+    }
+
+    .btn--outline:hover {
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+    }
+
+    .btn--nav {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ========================================
+       STICKY NAV
+       ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav__logo span {
+      color: var(--accent-teal);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* ========================================
+       SECTION 1: HERO
+       ======================================== */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: var(--section-py);
+      background-color: var(--bg-primary);
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 600px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+    }
+
+    .hero__prehead {
+      display: inline-block;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .hero__headline {
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .hero__deck {
+      max-width: 620px;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .hero__cta-group {
+      margin-bottom: 12px;
+    }
+
+    .hero__subtext {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      margin-bottom: 56px;
+    }
+
+    .hero__trust {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .hero__trust-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .hero__trust-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      align-items: center;
+    }
+
+    .hero__trust-logos span {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      opacity: 0.7;
+    }
+
+    .hero__trust-logos .sep {
+      color: var(--border-medium);
+      font-size: 0.875rem;
+    }
+
+    /* ========================================
+       SECTION 2: PROBLEM
+       ======================================== */
+    .problem {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .problem__content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .problem__content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 1.5em;
+      color: var(--text-primary);
+    }
+
+    .problem__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .problem__content p strong,
+    .problem__content p.problem__pullquote {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text-primary);
+      display: block;
+      margin: 2em 0;
+      padding: 24px 0 24px 32px;
+      border-left: 4px solid var(--accent-teal);
+    }
+
+    /* ========================================
+       SECTION 3: SOLUTION
+       ======================================== */
+    .solution {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .solution__intro {
+      max-width: 720px;
+      margin-bottom: 64px;
+    }
+
+    .solution__intro h2 {
+      margin-bottom: 28px;
+    }
+
+    .solution__intro p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .solution__label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+
+    .solution__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .solution__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .solution__card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .solution__card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+    }
+
+    .solution__card-icon--traitx {
+      background-color: var(--accent-teal-light);
+      color: var(--accent-teal);
+    }
+
+    .solution__card-icon--ready {
+      background-color: #FFF5E6;
+      color: #D4900A;
+    }
+
+    .solution__card-icon--wage {
+      background-color: var(--accent-cta-light);
+      color: var(--accent-cta);
+    }
+
+    .solution__card h3 {
+      margin-bottom: 14px;
+    }
+
+    .solution__card p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ========================================
+       SECTION 4: HOW IT WORKS
+       ======================================== */
+    .how-it-works {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .how-it-works__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+
+    .how-it-works__header h2 {
+      margin-bottom: 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .step {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .step__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 0.975rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .how-it-works__deposit {
+      text-align: center;
+      padding: 28px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      margin-bottom: 40px;
+    }
+
+    .how-it-works__deposit p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .how-it-works__deposit strong {
+      color: var(--text-primary);
+    }
+
+    .how-it-works__cta {
+      text-align: center;
+    }
+
+    /* ========================================
+       SECTION 5: WHO WE SERVE
+       ======================================== */
+    .who-we-serve {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .who-we-serve__header {
+      max-width: 640px;
+      margin-bottom: 56px;
+    }
+
+    .tiers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .tier {
+      padding: 40px 36px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      background: var(--bg-card);
+    }
+
+    .tier__label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .tier__label--local {
+      background-color: #E8F5F2;
+      color: var(--accent-teal);
+    }
+
+    .tier__label--saas {
+      background-color: #EDE8F5;
+      color: #6B4FA0;
+    }
+
+    .tier__label--professional {
+      background-color: #FFF5E6;
+      color: #B37A00;
+    }
+
+    .tier h3 {
+      margin-bottom: 14px;
+    }
+
+    .tier p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ========================================
+       SECTION 6: PROOF / SOCIAL PROOF
+       ======================================== */
+    .proof {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .proof__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+    }
+
+    .stat__number {
+      display: block;
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      color: var(--accent-teal);
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .stat__label {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .testimonial {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+    }
+
+    .testimonial__quote {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      font-style: normal;
+    }
+
+    .testimonial__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      flex-shrink: 0;
+    }
+
+    .testimonial__name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .testimonial__title {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .proof__stories {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .proof__stories a {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .proof__cta {
+      text-align: center;
+    }
+
+    /* ========================================
+       SECTION 7: PRICING
+       ======================================== */
+    .pricing {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .pricing__header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+
+    .pricing__header h2 {
+      margin-bottom: 16px;
+    }
+
+    .pricing__header p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Hero pricing card */
+    .pricing__hero {
+      background: var(--bg-card);
+      border: 2px solid var(--accent-teal);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .pricing__hero-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-teal);
+      margin-bottom: 24px;
+    }
+
+    .pricing__hero-price {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .pricing__hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .pricing__hero-deposit {
+      display: inline-block;
+      background: var(--accent-teal-light);
+      color: var(--accent-teal);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 10px 24px;
+      border-radius: 100px;
+      margin-bottom: 40px;
+    }
+
+    .pricing__hero-tagline {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.375rem;
+      color: var(--text-primary);
+      font-style: italic;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing__included {
+      text-align: left;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .pricing__included-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .pricing__included-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .pricing__included-list li {
+      padding: 10px 0 10px 32px;
+      position: relative;
+      font-size: 0.975rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pricing__included-list li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing__included-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 18px;
+      height: 18px;
+      background-color: var(--accent-teal);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 11.5L3.5 8.5L4.5 7.5L6.5 9.5L11.5 4.5L12.5 5.5L6.5 11.5Z' fill='white'/%3E%3C/svg%3E");
+      background-size: 16px 16px;
+      background-position: center;
+    }
+
+    /* Savings comparison */
+    .pricing__savings {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 56px;
+    }
+
+    .pricing__savings-header {
+      padding: 24px 36px 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pricing__savings-header h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--text-primary);
+    }
+
+    .pricing__compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing__compare-col {
+      padding: 32px 36px;
+    }
+
+    .pricing__compare-col--us {
+      border-right: 1px solid var(--border-light);
+    }
+
+    .pricing__compare-col-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+    }
+
+    .pricing__compare-col--xfusion .pricing__compare-col-label {
+      color: var(--accent-teal);
+    }
+
+    .pricing__compare-amount {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .pricing__compare-col--xfusion .pricing__compare-amount {
+      color: var(--accent-teal);
+    }
+
+    .pricing__compare-detail {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+
+    .pricing__savings-bar {
+      background: var(--accent-teal-light);
+      padding: 20px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pricing__savings-bar-label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    .pricing__savings-bar-amount {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--accent-teal);
+    }
+
+    .pricing__savings-note {
+      padding: 16px 36px 20px;
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* Add-ons */
+    .pricing__addons {
+      margin-bottom: 48px;
+    }
+
+    .pricing__addons-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .pricing__addons-header h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .pricing__addons-header p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .addon-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .addon {
+      padding: 32px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .addon__tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-teal);
+      background: var(--accent-teal-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .addon__price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .addon__price {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--accent-teal);
+      line-height: 1.2;
+    }
+
+    .addon__price-period {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+
+    .addon h4 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .addon p {
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pricing__cta {
+      text-align: center;
+    }
+
+    /* ========================================
+       SECTION 8: ABOUT / OUR STORY
+       ======================================== */
+    .about {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .about__header {
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+
+    .about__header h2 {
+      margin-bottom: 28px;
+    }
+
+    .about__header p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 56px;
+    }
+
+    .founder {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+    }
+
+    .founder__photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: var(--bg-alt);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .founder__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder h3 {
+      margin-bottom: 4px;
+    }
+
+    .founder__role {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      margin-bottom: 16px;
+    }
+
+    .founder p {
+      font-size: 0.975rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .values {
+      margin-bottom: 56px;
+    }
+
+    .values h3 {
+      margin-bottom: 20px;
+    }
+
+    .values__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .value {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .value__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-teal);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .value__text {
+      font-size: 0.975rem;
+      color: var(--text-secondary);
+    }
+
+    .value__text strong {
+      color: var(--text-primary);
+    }
+
+    .team {
+      margin-top: 56px;
+    }
+
+    .team h3 {
+      margin-bottom: 28px;
+    }
+
+    .team__leaders {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .team__leaders .team__member {
+      width: 180px;
+    }
+
+    .team__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .team__member {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .team__member-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: var(--bg-alt);
+      margin: 0 auto 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.125rem;
+      color: var(--accent-teal);
+    }
+
+    .team__member-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team__member-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .team__member-title {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    /* ========================================
+       SECTION 9: FAQ
+       ======================================== */
+    .faq {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .faq__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq__list {
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .faq__item {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq__item:first-child {
+      border-top: 1px solid var(--border-light);
+    }
+
+    .faq__question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.5;
+      gap: 16px;
+    }
+
+    .faq__question:hover {
+      color: var(--accent-teal);
+    }
+
+    .faq__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq__icon svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq__item.active .faq__icon {
+      background-color: var(--accent-teal);
+      border-color: var(--accent-teal);
+    }
+
+    .faq__item.active .faq__icon svg path {
+      stroke: #FFFFFF;
+    }
+
+    .faq__item.active .faq__icon svg {
+      transform: rotate(45deg);
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq__answer-inner {
+      padding-bottom: 24px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+
+    .faq__cta {
+      text-align: center;
+    }
+
+    /* ========================================
+       SECTION 10: FINAL CTA
+       ======================================== */
+    .final-cta {
+      background-color: var(--accent-teal);
+      padding: var(--section-py) 0;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.125rem;
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.75;
+    }
+
+    .final-cta .btn--primary {
+      background-color: #FFFFFF;
+      color: var(--accent-teal);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .final-cta .btn--primary:hover {
+      background-color: #F2F0EB;
+      color: var(--accent-teal-dark);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .final-cta__subtext {
+      margin-top: 16px;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background-color: var(--bg-alt);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .footer__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .footer__logo span {
+      color: var(--accent-teal);
+    }
+
+    .footer__copy {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer__links a {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       RESPONSIVE — TABLET (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .solution__cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tiers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stats-bar {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing__included-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+      }
+
+      .pricing__included-list li:nth-last-child(-n+2) {
+        border-bottom: none;
+      }
+
+      .founders {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .addon-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE — DESKTOP (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      :root {
+        --section-py: 120px;
+      }
+
+      .nav__toggle {
+        display: none !important;
+      }
+
+      .steps {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .team__grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE — MOBILE (<768px)
+       ======================================== */
+    @media (max-width: 767px) {
+      :root {
+        --section-py: var(--section-py-mobile);
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        padding: 20px 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav__links.open {
+        display: flex;
+      }
+
+      .nav__toggle {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+
+      .hero__trust-logos {
+        gap: 6px 16px;
+      }
+
+      .pricing__hero {
+        padding: 40px 24px;
+      }
+
+      .pricing__compare-col {
+        padding: 24px 20px;
+      }
+
+      .pricing__savings-header {
+        padding: 20px 20px 16px;
+      }
+
+      .pricing__savings-bar {
+        padding: 16px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .pricing__savings-note {
+        padding: 12px 20px 16px;
+      }
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-delay-1 { transition-delay: 0.1s; }
+      .fade-in-delay-2 { transition-delay: 0.2s; }
+      .fade-in-delay-3 { transition-delay: 0.3s; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       STICKY NAV
+       ======================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">x<span>Fusion</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#proof">Case Studies</a></li>
+        <li><a href="#final-cta" class="btn btn--primary btn--nav">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       SECTION 1: HERO
+       ======================================== -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <p class="hero__prehead fade-in">For business owners who are done doing everyone else's job</p>
+      <h1 class="hero__headline fade-in fade-in-delay-1">You're the bottleneck.<br>And you already know it.</h1>
+      <p class="hero__deck fade-in fade-in-delay-2">xFusion finds, vets, and places dedicated international team members so you can stop doing everyone's job yourself. Building loyal, happy teams since 2020. Your candidate shortlist delivered in about 14 days.</p>
+      <div class="hero__cta-group fade-in fade-in-delay-3">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+      </div>
+      <p class="hero__subtext fade-in fade-in-delay-3">30 minutes. No commitment. No credit card.<br><span style="font-size:0.875rem; color:var(--text-tertiary);">You'll talk directly with our founding team.</span></p>
+      <div class="hero__trust fade-in">
+        <p class="hero__trust-label">Trusted by</p>
+        <div class="hero__trust-logos">
+          <span>Tolstoy</span><span class="sep">&middot;</span>
+          <span>SavvyCal</span><span class="sep">&middot;</span>
+          <span>TheReceptionist</span><span class="sep">&middot;</span>
+          <span>Freak Athlete</span><span class="sep">&middot;</span>
+          <span>Revy</span><span class="sep">&middot;</span>
+          <span>Ordered Magic</span><span class="sep">&middot;</span>
+          <span>Bonify</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 2: PROBLEM
+       ======================================== -->
+  <section id="problem" class="problem">
+    <div class="container container--narrow">
+      <h2 class="fade-in" style="margin-bottom:40px;">Sound familiar?</h2>
+      <div class="problem__content fade-in">
+        <p>You're answering customer emails at 9pm. Your operations manager reconciles invoices all week. Your best salesperson is updating spreadsheets instead of closing deals.</p>
+        <p>Everyone on the team is busy, but nobody is doing their highest-value work. Including you.</p>
+        <p class="problem__pullquote">Your team is buried in work. Just not the right work.</p>
+        <p>You've thought about hiring. But the last person you brought on needed more hand-holding than the job was worth. So your team absorbed the extra load, and now "that's just how it is."</p>
+        <p>Every hour your team spends on work someone else could own is an hour your competitor is using to get ahead.</p>
+      </div>
+      <div class="problem__cta fade-in" style="text-align:center; margin-top:48px;">
+        <a href="#how-it-works" class="btn btn--outline" style="border:2px solid var(--accent-teal); color:var(--accent-teal); background:transparent; padding:14px 32px; border-radius:var(--radius-sm); font-size:1rem; font-weight:600; display:inline-block; transition:all 0.2s ease;">See how we do it differently</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 3: SOLUTION
+       ======================================== -->
+  <section id="solution" class="solution">
+    <div class="container">
+      <div class="solution__intro fade-in">
+        <h2>Stop wearing every hat. Hand a few off.</h2>
+        <p>You already know which roles need to be filled. Customer support, bookkeeping, admin, development, marketing. The work piles up because the people doing it have so many other things they should be focused on.</p>
+        <p>xFusion finds and places dedicated international team members who take those roles seriously. This isn't side work for them. It's their career. Every candidate goes through our proprietary TraitX vetting framework.</p>
+        <p>We recruit for roles that pay well in the candidate's home country. Real stability, not side income. When someone feels secure in their position, they commit long term. That's how you build a team that stays.</p>
+      </div>
+      <p class="solution__label">Three things set us apart</p>
+      <div class="solution__cards">
+        <div class="solution__card fade-in">
+          <div class="solution__card-icon solution__card-icon--traitx">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          </div>
+          <h3>The TraitX Framework</h3>
+          <p>Our proprietary vetting system screens hundreds of applicants to find the handful worth your time. Every candidate goes through human-led interviews, work-style evaluations, and recorded video introductions. You see redacted resumes and Zoom recordings before you meet anyone, so you can judge their English, their thinking, and their presence for yourself.</p>
+        </div>
+        <div class="solution__card fade-in fade-in-delay-1">
+          <div class="solution__card-icon solution__card-icon--ready">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Matched to How You Work</h3>
+          <p>Every search starts with understanding your business: how your team communicates, what tools you use, and the personality that fits your culture. The candidates on your shortlist aren't just qualified on paper. They've been selected for how your company actually operates. That's why clients tell us their new hire felt like an internal team member from the first week.</p>
+        </div>
+        <div class="solution__card fade-in fade-in-delay-2">
+          <div class="solution__card-icon solution__card-icon--wage">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>The Living Wage Advantage</h3>
+          <p>We recruit for roles that provide real income and stability in the candidate's local economy. Not gig work. Not side income. A career. When someone earns a strong, stable living where they live, they commit to your business the way you need them to. That's how clients like Bonify and TheReceptionist have kept the same team members for years, not months.</p>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+        <p style="margin-top:12px; font-size:0.875rem; color:var(--text-tertiary);">90-day replacement guarantee</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 4: HOW IT WORKS
+       ======================================== -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="how-it-works__header fade-in">
+        <h2>From "I need help" to "they just started" in about 14 days.</h2>
+      </div>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step__number">1</div>
+          <h3>Tell us what you need.</h3>
+          <p>Book a 30-minute discovery call. We'll map the role, the skills, and the personality fit you're looking for. A real conversation. No forms, no AI chatbot, no runaround.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-1">
+          <div class="step__number">2</div>
+          <h3>We find your candidates.</h3>
+          <p>Using the TraitX Framework, we screen, interview, and evaluate hundreds of applicants. We handle the job posting, the outreach, the vetting, all of it.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-2">
+          <div class="step__number">3</div>
+          <h3>Review the shortlist.</h3>
+          <p>You'll receive redacted resumes and recorded Zoom interviews for your top candidates. Watch them. Evaluate their communication, their thinking, their energy. Then decide who you'd like to meet.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-3">
+          <div class="step__number">4</div>
+          <h3>Build your team.</h3>
+          <p>Interview your finalists directly. When you find the right fit, whether it's one person or several, we extend the offer, handle onboarding logistics, and invoice the one-time placement fee.</p>
+        </div>
+      </div>
+      <div class="how-it-works__deposit fade-in">
+        <p><strong>Your deposit:</strong> $500 to lock in an active search. Fully refundable if we don't deliver candidates you're excited about.</p>
+      </div>
+      <div class="how-it-works__cta fade-in">
+        <a href="#" class="btn btn--primary">Start With a Discovery Call</a>
+        <p style="margin-top:12px; font-size:0.875rem; color:var(--text-tertiary);">30 minutes · No commitment · Fully refundable deposit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 5: WHO WE SERVE
+       ======================================== -->
+  <section id="who-we-serve" class="who-we-serve">
+    <div class="container">
+      <div class="who-we-serve__header fade-in">
+        <h2>Built for business owners who are ready to stop doing everything themselves.</h2>
+      </div>
+      <div class="tiers">
+        <div class="tier fade-in">
+          <span class="tier__label tier__label--local">Local Services</span>
+          <h3>Local Service Businesses</h3>
+          <p>HVAC companies. Plumbers. Electricians. Pest control. Bakeries. Roofers. Your highest-paid technician answers phones instead of making money in the field. We place office managers, dispatchers, and admin support so your skilled workers stay where they belong, at 70-80% less than a local hire. Your best people stay in the field while a team runs the office.</p>
+        </div>
+        <div class="tier fade-in fade-in-delay-1">
+          <span class="tier__label tier__label--saas">SaaS &amp; E-Commerce</span>
+          <h3>SaaS &amp; E-Commerce Companies</h3>
+          <p>Startups. Shopify brands. Digital agencies. You're burning cash on roles that don't need a Bay Area salary. We place customer support reps, SDRs, marketers, and developers who plug directly into your tools and workflows. Tolstoy's xFusion team helped boost their Shopify app ranking by 90 points through exceptional support.</p>
+        </div>
+        <div class="tier fade-in fade-in-delay-2">
+          <span class="tier__label tier__label--professional">Professional Services</span>
+          <h3>Professional Services Firms</h3>
+          <p>Tax advisors. Engineers. Attorneys. You need someone sharp, analytical, and articulate. Someone who treats your clients with the same care you do. We find specialists who don't just fill a seat; they build their career around your firm. Arbio chose xFusion because they needed candidates who could handle specialized workstation setups and communicate in multiple languages. As the company scaled, they came back to expand their team again. Not for temporary help. For sustainable growth.</p>
+        </div>
+      </div>
+      <div class="who-we-serve__cta fade-in" style="text-align:center; margin-top:56px;">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+        <p style="margin-top:12px; font-size:0.875rem; color:var(--text-tertiary);">Tell us the role. We'll find the person.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 6: PROOF / SOCIAL PROOF
+       ======================================== -->
+  <section id="proof" class="proof">
+    <div class="container">
+      <div class="proof__header fade-in">
+        <h2>Don't take our word for it.</h2>
+      </div>
+      <div class="stats-bar fade-in">
+        <div class="stat">
+          <span class="stat__number">Est. 2020</span>
+          <span class="stat__label">Proven Track Record</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">70-80%</span>
+          <span class="stat__label">Cost Savings</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">~14 Day</span>
+          <span class="stat__label">Delivery</span>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial fade-in">
+          <p class="testimonial__quote">"xFusion has been an absolute game-changer for Tolstoy. Working with them has enabled us to grow faster and more professionally than we ever could have alone."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">DK</div>
+            <div>
+              <p class="testimonial__name">Dov Kaufmann</p>
+              <p class="testimonial__title">CEO, Tolstoy · Interactive Video Platform</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in fade-in-delay-1">
+          <p class="testimonial__quote">"Our xFusion team's ability to adapt and learn quickly has been such an asset to SkyFi. They never leave a customer interaction unresolved and are always quick to alert us to potential opportunities, which has helped our team grow at scale."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">CF</div>
+            <div>
+              <p class="testimonial__name">Claire Fundingsland</p>
+              <p class="testimonial__title">Head of Customer Experience, SkyFi · Satellite Imaging</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in">
+          <p class="testimonial__quote">"I forget that they're technically not in-house employees, they truly are part of the Freak Athlete team."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">BS</div>
+            <div>
+              <p class="testimonial__name">Benji Stark-Elster</p>
+              <p class="testimonial__title">Founder, Freak Athlete · Fitness Equipment</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in fade-in-delay-1">
+          <p class="testimonial__quote">"The entire way that we're thinking about the future now is different because of the experience that we've had working with you at xFusion."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">TM</div>
+            <div>
+              <p class="testimonial__name">Toby Marsden</p>
+              <p class="testimonial__title">Founder, Ordered Magic · E-Commerce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="proof__stories"><span style="color: var(--accent-teal); cursor: default;">Read more stories &rarr;</span></p>
+      <div class="proof__cta fade-in">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+        <p style="margin-top:12px; font-size:0.875rem; color:var(--text-tertiary);">90-day replacement guarantee</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 7: PRICING
+       ======================================== -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="pricing__header fade-in">
+        <h2>Straightforward pricing. No hidden fees. No surprises.</h2>
+        <p>US-based admin roles cost around $60,000+ per year, not including overhead and payroll expenses. Through xFusion, you'll pay roughly $18,000 for the same caliber of talent.</p>
+      </div>
+
+      <!-- Hero pricing card -->
+      <div class="pricing__hero fade-in">
+        <p class="pricing__hero-label">One-Time Placement Fee</p>
+        <p class="pricing__hero-price">35%</p>
+        <p class="pricing__hero-subtitle">of your new hire's annual base salary</p>
+        <p class="pricing__hero-deposit">$500 refundable deposit to start your search</p>
+        <p class="pricing__hero-tagline">One fee. One time. Then the savings add up every single month.</p>
+
+        <div class="pricing__included">
+          <p class="pricing__included-label">What's included</p>
+          <ul class="pricing__included-list">
+            <li>Full hiring pipeline managed for you</li>
+            <li>Candidates vetted through TraitX</li>
+            <li>Redacted resumes + Zoom recordings</li>
+            <li>Shortlist delivered in ~14 days</li>
+            <li>Deposit applied toward final fee</li>
+            <li>90-day replacement guarantee</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Savings comparison -->
+      <div class="pricing__savings fade-in">
+        <div class="pricing__savings-header">
+          <h3>The math on a typical hire</h3>
+        </div>
+
+        <div class="pricing__compare-row">
+          <div class="pricing__compare-col pricing__compare-col--us">
+            <p class="pricing__compare-col-label">US Hire</p>
+            <p class="pricing__compare-amount">$60,000+</p>
+            <p class="pricing__compare-detail">per year (salary only)</p>
+          </div>
+          <div class="pricing__compare-col pricing__compare-col--xfusion">
+            <p class="pricing__compare-col-label">Through xFusion</p>
+            <p class="pricing__compare-amount">$24,300</p>
+            <p class="pricing__compare-detail">first year (salary + placement fee)</p>
+          </div>
+        </div>
+
+        <div class="pricing__savings-bar">
+          <span class="pricing__savings-bar-label">First-year savings</span>
+          <span class="pricing__savings-bar-amount">$35,700+</span>
+        </div>
+
+        <div class="pricing__compare-row" style="border-top: 1px solid var(--border-light);">
+          <div class="pricing__compare-col pricing__compare-col--us">
+            <p class="pricing__compare-col-label">Year 2 and beyond</p>
+            <p class="pricing__compare-amount">$60,000+</p>
+            <p class="pricing__compare-detail">per year</p>
+          </div>
+          <div class="pricing__compare-col pricing__compare-col--xfusion">
+            <p class="pricing__compare-col-label">Year 2 and beyond</p>
+            <p class="pricing__compare-amount">$18,000</p>
+            <p class="pricing__compare-detail">per year (salary only, no placement fee)</p>
+          </div>
+        </div>
+
+        <div class="pricing__savings-bar">
+          <span class="pricing__savings-bar-label">Ongoing annual savings</span>
+          <span class="pricing__savings-bar-amount">$42,000+</span>
+        </div>
+
+        <div class="pricing__savings-note">
+          Before counting the cost of a bad hire (up to 2x their annual salary) that the TraitX Framework helps you avoid.
+        </div>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="pricing__addons fade-in">
+        <div class="pricing__addons-header">
+          <h3>Optional: Keep your team for the long haul</h3>
+          <p>You manage the hire directly. These services make it easier.</p>
+        </div>
+
+        <div class="addon-cards">
+          <div class="addon">
+            <span class="addon__tag">Most Popular</span>
+            <div class="addon__price-row">
+              <span class="addon__price">$300</span>
+              <span class="addon__price-period">/ month</span>
+            </div>
+            <h4>Payroll Management</h4>
+            <p>We handle salary disbursement, light HR, and PTO so you don't have to figure out international payroll. One vendor, zero headaches.</p>
+          </div>
+          <div class="addon">
+            <span class="addon__tag">Retention Booster</span>
+            <div class="addon__price-row">
+              <span class="addon__price">$150</span>
+              <span class="addon__price-period">/ month</span>
+            </div>
+            <h4>Culture &amp; Engagement</h4>
+            <p>Virtual and in-person team-building events, contests, branded swag, birthday and anniversary gifts, and structured holiday gifting. The small things that turn a hire into a team member who stays.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="pricing__cta fade-in">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+        <p style="margin-top:12px; font-size:0.875rem; color:var(--text-tertiary);">90-day replacement guarantee</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 8: ABOUT / OUR STORY
+       ======================================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about__header fade-in">
+        <h2>We started xFusion because we hated what staffing agencies do to people.</h2>
+        <p>In 2020, we looked at the outsourcing industry and saw a broken model. Agencies that bragged about cheap labor. Workers paid so poorly they had no reason to stay longer than a few months. Clients stuck in an endless cycle of hiring, training, losing, and starting over.</p>
+        <p>We asked a question that seemed obvious: what if you actually treated overseas talent like the skilled professionals they are?</p>
+        <p>So that's what we built. A company where team members earn real wages, get genuine investment in their growth, and feel like they belong to something. Happy people do better work. They stay longer. They care more. And our clients, from SaaS startups to HVAC companies to law firms, have built teams they trust because they built those teams with us.</p>
+      </div>
+
+      <div class="founders">
+        <div class="founder fade-in">
+          <div class="founder__photo"><img src="images/jim-coleman.png" alt="Jim Coleman, Co-Founder of xFusion"></div>
+          <h3>Jim Coleman</h3>
+          <p class="founder__role">Co-Founder</p>
+          <p>Before xFusion, Jim worked as a detective, then built and sold businesses of his own before running operations for a private equity fund. His years of vetting teams and turning around underperforming businesses taught him one thing: the right people change everything. Jim and his wife Velvie live in the Denver area, where they raised five children. They were a foster family for many years and are also an adoptive family.</p>
+        </div>
+        <div class="founder fade-in fade-in-delay-1">
+          <div class="founder__photo"><img src="images/david-tran.png" alt="David Tran, Co-Founder of xFusion"></div>
+          <h3>David Tran</h3>
+          <p class="founder__role">Co-Founder</p>
+          <p>David studied Computer Science at UC Berkeley and spent years as a software engineer at Uber and Salesforce. He helped cast the original vision for xFusion, bringing an engineer's discipline to how the company thinks about finding and vetting talent. A first-generation Vietnamese American, David is a newlywed, an avid traveler, and someone who believes great companies are built by people who genuinely care.</p>
+        </div>
+      </div>
+
+      <div class="values fade-in">
+        <h3>What We Stand For</h3>
+        <div class="values__grid">
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Unwavering integrity</strong>: our word is our bond.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Dignity of work</strong>: good work changes families.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Ownership</strong>: we build it, in founders and in team members.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Long-term thinking</strong>: we don't think in months. We think in years.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Service</strong>: we put others first.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Passion for people</strong>: we go the extra mile because people matter.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Tenacity</strong>: we embrace hard problems.</p>
+          </div>
+          <div class="value">
+            <div class="value__dot"></div>
+            <p class="value__text"><strong>Empathy</strong>: we listen before we act.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team fade-in">
+        <h3>Meet the Leadership Team</h3>
+        <div class="team__leaders">
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/velvie-coleman.png" alt="Velvie Coleman"></div>
+            <p class="team__member-name">Velvie Coleman</p>
+            <p class="team__member-title">CEO</p>
+          </div>
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/daniel-juma.png" alt="Daniel Juma"></div>
+            <p class="team__member-name">Daniel Juma</p>
+            <p class="team__member-title">Head of Operations</p>
+          </div>
+        </div>
+        <div class="team__grid">
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/martin-onami.png" alt="Martin Onami"></div>
+            <p class="team__member-name">Martin Onami</p>
+            <p class="team__member-title">Account Manager</p>
+          </div>
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/reggie-rendal.png" alt="Reggie Rendal"></div>
+            <p class="team__member-name">Reggie Rendal</p>
+            <p class="team__member-title">Account Manager</p>
+          </div>
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/marie-medina.png" alt="Marie Medina"></div>
+            <p class="team__member-name">Marie Medina</p>
+            <p class="team__member-title">Account Manager</p>
+          </div>
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/japs-mirasol.png" alt="Jonellyn Japs Mirasol"></div>
+            <p class="team__member-name">Jonellyn "Japs" Mirasol</p>
+            <p class="team__member-title">Lead Recruiter</p>
+          </div>
+          <div class="team__member">
+            <div class="team__member-photo"><img src="images/bianca-dadulla.png" alt="Bianca Dadulla"></div>
+            <p class="team__member-name">Bianca Dadulla</p>
+            <p class="team__member-title">Lead Recruiter</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 9: FAQ
+       ======================================== -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="faq__header fade-in">
+        <h2>The questions we hear on every discovery call.</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item active">
+          <button class="faq__question" aria-expanded="true">
+            Will they speak good English?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="false">
+            <div class="faq__answer-inner">Every candidate goes through human-led interviews where we assess English fluency, communication style, and professional presence. You'll see and hear them on video before you ever schedule a meeting, so you can judge for yourself, not take our word for it.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What if the hire doesn't work out?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">We offer a 90-day guarantee. If the placement isn't the right fit within the first 90 days, we'll replace them at no additional cost. Our goal is to get it right, not to collect a fee and disappear.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Is 35% an expensive placement fee?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Consider this: our clients save $35,000+ in the first year on a typical placement compared to a US hire. A bad hire can cost up to 2x their annual salary to replace. The placement fee is a one-time investment that pays for itself within weeks.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            How long does the process take?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">About 14 days from your discovery call to a candidate shortlist in your inbox. Some roles move faster; specialized positions may take a bit longer. We'll set clear expectations on your call.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Do you handle payroll and legal compliance?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">If you want us to, yes. Our optional Payroll Management service ($300/month) means xFusion handles salary disbursement, light HR, and PTO. Team members are engaged as independent contractors, and we help manage the logistics so you don't have to figure out international payroll on your own.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What roles can you fill?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Customer support, executive assistants, accountants, bookkeepers, account executives, SDRs, social media managers, graphic designers, developers, data analysts, project managers, and more. If you're not sure we can fill a specific role, just ask on the discovery call. We'll be honest about it.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Where does your talent come from?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Primarily the Philippines and Kenya. Since 2020, we've built deep networks in both regions and developed a strong understanding of the talent landscape. These are markets with exceptional English-speaking professionals who bring both skill and commitment.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Is there a long-term contract?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">No. The $500 deposit is fully refundable if we don't deliver candidates you're genuinely excited about. No lock-in, no fine print.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Do you replace American jobs?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">No. We help American small businesses stay strong so they can continue hiring locally where it matters most. Our clients typically use us for support roles like scheduling, invoicing, customer follow-up, and admin so they can focus on keeping core, on-site work local. This isn't about cutting corners. It's about staying in business long enough to keep serving your community.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Why not just hire locally for support work?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Many owners struggle to find reliable, long-term support help locally for roles that require consistency and follow-through. These jobs are often viewed as temporary or transitional, which leads to frequent no-shows, high turnover, and ongoing retraining. For the people we place in the Philippines and Kenya, these same roles are career positions, not stepping-stone jobs. They're highly respected, taken seriously, and held to high standards. That's why our clients often see greater consistency and long-term stability in these support roles.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What about after-hours coverage?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Our talent works full-time hours just like any team member. Because they're based in the Philippines and Kenya, you have flexibility in how you structure coverage. Some clients have their xFusion team member work US business hours. Others stagger shifts to cover evenings or weekends. And some build a team that covers around the clock. The point is, you decide the schedule that fits your business.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            How do I keep a remote team member engaged long term?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">That's one of the most common concerns we hear, and it's why we offer an optional Culture &amp; Engagement service for $150/month. It includes virtual and in-person team-building events, contests, branded swag, birthday and anniversary gifts, and structured holiday gifting. These are the small, consistent things that make someone feel like part of your team, not just a contractor on the other side of the world. Pair that with a role that pays a real living wage in their local economy, and you get someone who stays for years, not months.</div>
+          </div>
+        </div>
+      </div>
+      <div class="faq__cta fade-in">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 10: FINAL CTA
+       ======================================== -->
+  <section id="final-cta" class="final-cta">
+    <div class="container">
+      <h2 class="fade-in">You've read this far for a reason.</h2>
+      <p class="fade-in fade-in-delay-1">Something about the way you're running your business right now isn't working. Maybe it's the 60-hour weeks. Maybe it's the support tickets that won't stop. Maybe you're just tired of being the person everyone depends on for everything.</p>
+      <p class="fade-in fade-in-delay-1">This is what the discovery call is for. Thirty minutes to talk through the role you need filled, what your business looks like right now, and whether xFusion is the right fit.</p>
+      <p class="fade-in fade-in-delay-1">If we're not the right fit, we'll tell you. Honest is how we operate.</p>
+      <div class="final-cta__steps fade-in fade-in-delay-1" style="display:flex; justify-content:center; gap:40px; margin:40px auto 36px; max-width:640px; flex-wrap:wrap;">
+        <div style="text-align:center; flex:1; min-width:140px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.2); display:inline-flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:8px;">1</div>
+          <p style="font-size:0.875rem; opacity:0.85;">Pick a time that works</p>
+        </div>
+        <div style="text-align:center; flex:1; min-width:140px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.2); display:inline-flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:8px;">2</div>
+          <p style="font-size:0.875rem; opacity:0.85;">30-min call with our team</p>
+        </div>
+        <div style="text-align:center; flex:1; min-width:140px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.2); display:inline-flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:8px;">3</div>
+          <p style="font-size:0.875rem; opacity:0.85;">Get your candidate shortlist</p>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-2">
+        <a href="#" class="btn btn--primary">Book My Discovery Call</a>
+      </div>
+      <p class="final-cta__subtext fade-in fade-in-delay-2">$500 refundable deposit to start · 90-day guarantee · Candidate shortlist in ~14 days</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">x<span>Fusion</span></p>
+        <p class="footer__copy">&copy; 2026 xFusion. All rights reserved.</p>
+        <ul class="footer__links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       MINIMAL JS
+       ======================================== -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Nav shadow on scroll
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Initialize first FAQ item as open
+    const firstFaqItem = document.querySelector('.faq__item.active');
+    if (firstFaqItem) {
+      const firstAnswer = firstFaqItem.querySelector('.faq__answer');
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq__question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = item.querySelector('.faq__answer');
+        const isActive = item.classList.contains('active');
+
+        // Close all others
+        document.querySelectorAll('.faq__item.active').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('active');
+            openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq__answer').style.maxHeight = null;
+            openItem.querySelector('.faq__answer').setAttribute('aria-hidden', 'true');
+          }
+        });
+
+        // Toggle current
+        item.classList.toggle('active');
+        button.setAttribute('aria-expanded', !isActive);
+        answer.setAttribute('aria-hidden', isActive);
+
+        if (!isActive) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = null;
+        }
+      });
+    });
+
+    // Scroll-triggered fade-in animations
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>

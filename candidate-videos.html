@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Videos | xFusion</title>
+  <meta name="description" content="Watch real candidate introduction videos from xFusion's TraitX vetting process. See their communication skills, personality, and professionalism before you meet them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: #1A7A6D;
+      color: #FAFAF7;
+    }
+
+    :root {
+      --bg-primary: #FAFAF7;
+      --bg-alt: #F2F0EB;
+      --bg-card: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --accent-teal: #1A7A6D;
+      --accent-teal-light: #E8F5F2;
+      --accent-teal-dark: #145F55;
+      --accent-cta: #E8613A;
+      --accent-cta-hover: #D4522D;
+      --accent-cta-light: #FFF0EB;
+      --border-light: #E5E3DE;
+      --border-medium: #D1CFC8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,26,26,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+      --shadow-lg: 0 8px 32px rgba(26,26,26,0.10);
+      --max-width: 1140px;
+      --section-py: 100px;
+      --section-py-mobile: 64px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-teal-dark);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========================================
+       NAV (matched from main site)
+       ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
+      height: 72px;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav__logo span {
+      color: var(--accent-teal);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 42px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background-color: var(--accent-cta);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(232, 97, 58, 0.25);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--accent-cta-hover);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(232, 97, 58, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn--nav {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .videos-hero {
+      padding-top: 140px;
+      padding-bottom: 48px;
+      text-align: center;
+    }
+
+    .videos-hero h1 {
+      margin-bottom: 16px;
+    }
+
+    .videos-hero p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 8px;
+    }
+
+    .videos-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      margin-bottom: 24px;
+    }
+
+    .videos-hero__back:hover {
+      color: var(--accent-teal);
+    }
+
+    /* ========================================
+       FILTER BAR
+       ======================================== */
+    .filters {
+      padding-bottom: 40px;
+    }
+
+    .filters__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .filter-chip {
+      display: inline-block;
+      padding: 8px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .filter-chip:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    .filter-chip.active {
+      background: var(--accent-teal);
+      color: #FFFFFF;
+      border-color: var(--accent-teal);
+    }
+
+    /* ========================================
+       VIDEO GRID
+       ======================================== */
+    .video-grid {
+      padding-bottom: var(--section-py);
+    }
+
+    .video-grid__inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* ========================================
+       VIDEO CARD
+       ======================================== */
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      position: relative;
+    }
+
+    .video-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .video-card__media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+
+    .video-card__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-card__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Instrument Serif', serif;
+      font-size: 3rem;
+      color: var(--accent-teal);
+      opacity: 0.15;
+    }
+
+    /* Play button overlay */
+    .video-card__play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
+
+    .video-card__play svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+      fill: var(--accent-teal);
+    }
+
+    .video-card:hover .video-card__play {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    /* Gradient overlay at bottom */
+    .video-card__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 48px 16px 16px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+      z-index: 1;
+    }
+
+    .video-card__name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .video-card__role {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .video-card__tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 8px;
+    }
+
+    .video-card__tag--support { background: var(--accent-teal-light); color: var(--accent-teal); }
+    .video-card__tag--admin { background: #EDE8F5; color: #6B4FA0; }
+    .video-card__tag--finance { background: #FFF5E6; color: #B37A00; }
+    .video-card__tag--marketing { background: var(--accent-cta-light); color: var(--accent-cta); }
+    .video-card__tag--sales { background: #E8F0FF; color: #3366CC; }
+    .video-card__tag--design { background: #FFF0F5; color: #CC3366; }
+    .video-card__tag--tech { background: #F0F0F0; color: #555555; }
+
+    /* Card info below video (alternative display) */
+    .video-card__info {
+      padding: 16px;
+    }
+
+    .video-card__info-name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .video-card__info-role {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* ========================================
+       CTA SECTION
+       ======================================== */
+    .videos-cta {
+      text-align: center;
+      padding-bottom: var(--section-py);
+    }
+
+    .videos-cta h2 {
+      margin-bottom: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .videos-cta p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========================================
+       FOOTER (matched from main site)
+       ======================================== */
+    .footer {
+      background-color: var(--bg-alt);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .footer__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .footer__logo span {
+      color: var(--accent-teal);
+    }
+
+    .footer__copy {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer__links a {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       RESPONSIVE - TABLET (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .video-grid__inner {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - DESKTOP (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      :root {
+        --section-py: 120px;
+      }
+
+      .nav__toggle {
+        display: none !important;
+      }
+
+      .video-grid__inner {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - MOBILE (<768px)
+       ======================================== */
+    @media (max-width: 767px) {
+      :root {
+        --section-py: var(--section-py-mobile);
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        padding: 20px 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav__links.open {
+        display: flex;
+      }
+
+      .nav__toggle {
+        display: block;
+      }
+
+      .videos-hero {
+        padding-top: 110px;
+      }
+
+      .video-grid__inner {
+        gap: 14px;
+      }
+
+      .video-card__play {
+        width: 44px;
+        height: 44px;
+      }
+
+      .video-card__play svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .video-card__name {
+        font-size: 0.8125rem;
+      }
+
+      .video-card__role {
+        font-size: 0.75rem;
+      }
+
+      .video-card__tag {
+        font-size: 0.625rem;
+        padding: 2px 8px;
+      }
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-delay-1 { transition-delay: 0.1s; }
+      .fade-in-delay-2 { transition-delay: 0.2s; }
+      .fade-in-delay-3 { transition-delay: 0.3s; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">x<span>Fusion</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#proof">Case Studies</a></li>
+        <li><a href="index.html#final-cta" class="btn btn--primary btn--nav">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="videos-hero">
+    <div class="container">
+      <a href="index.html" class="videos-hero__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to Home
+      </a>
+      <h1 class="fade-in">Meet the Talent</h1>
+      <p class="fade-in fade-in-delay-1">Watch real candidate introductions from our TraitX vetting process. See their communication, personality, and professionalism before you ever schedule a meeting.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filters">
+    <div class="container">
+      <div class="filters__inner">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="support">Customer Support</button>
+        <button class="filter-chip" data-filter="admin">Executive Assistant</button>
+        <button class="filter-chip" data-filter="finance">Bookkeeping</button>
+        <button class="filter-chip" data-filter="marketing">Marketing</button>
+        <button class="filter-chip" data-filter="sales">Sales</button>
+        <button class="filter-chip" data-filter="design">Design</button>
+        <button class="filter-chip" data-filter="tech">Technical</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO GRID -->
+  <section class="video-grid">
+    <div class="container">
+      <div class="video-grid__inner">
+
+        <!-- Card 1 -->
+        <div class="video-card fade-in" data-category="support">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3727464/pexels-photo-3727464.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Maria Santos</p>
+              <p class="video-card__role">Customer Support Specialist</p>
+              <span class="video-card__tag video-card__tag--support">Customer Support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="video-card fade-in fade-in-delay-1" data-category="admin">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">James Ochieng</p>
+              <p class="video-card__role">Executive Assistant</p>
+              <span class="video-card__tag video-card__tag--admin">Executive Assistant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="video-card fade-in fade-in-delay-2" data-category="finance">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Ana Reyes</p>
+              <p class="video-card__role">Bookkeeper</p>
+              <span class="video-card__tag video-card__tag--finance">Bookkeeping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="video-card fade-in fade-in-delay-3" data-category="marketing">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3727459/pexels-photo-3727459.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Grace Wanjiku</p>
+              <p class="video-card__role">Social Media Manager</p>
+              <span class="video-card__tag video-card__tag--marketing">Marketing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="video-card fade-in" data-category="sales">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Daniel Cruz</p>
+              <p class="video-card__role">Sales Development Rep</p>
+              <span class="video-card__tag video-card__tag--sales">Sales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="video-card fade-in fade-in-delay-1" data-category="design">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Cherry Mendoza</p>
+              <p class="video-card__role">Graphic Designer</p>
+              <span class="video-card__tag video-card__tag--design">Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="video-card fade-in fade-in-delay-2" data-category="tech">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Kevin Mwangi</p>
+              <p class="video-card__role">Data Analyst</p>
+              <span class="video-card__tag video-card__tag--tech">Technical</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="video-card fade-in fade-in-delay-3" data-category="admin">
+          <div class="video-card__media">
+            <video class="video-card__video" muted playsinline preload="metadata" loop
+              poster="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400&h=711&fit=crop">
+              <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=15ff2f42a8c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="video-card__play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__name">Liza Dela Cruz</p>
+              <p class="video-card__role">Project Manager</p>
+              <span class="video-card__tag video-card__tag--admin">Executive Assistant</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="videos-cta">
+    <div class="container">
+      <h2 class="fade-in">Ready to see candidates matched to your business?</h2>
+      <p class="fade-in fade-in-delay-1">Book a 30-minute discovery call. We'll learn what you need and start your search.</p>
+      <a href="index.html#final-cta" class="btn btn--primary fade-in fade-in-delay-2">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">x<span>Fusion</span></p>
+        <p class="footer__copy">&copy; 2026 xFusion. All rights reserved.</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      const links = document.querySelector('.nav__links');
+      const isOpen = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Fade-in on scroll
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // Video hover to play (desktop) / tap to play (mobile)
+    document.querySelectorAll('.video-card').forEach(card => {
+      const video = card.querySelector('.video-card__video');
+      if (!video) return;
+
+      // Desktop: hover to play
+      card.addEventListener('mouseenter', () => {
+        video.play().catch(() => {});
+      });
+
+      card.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+
+      // Mobile: tap to toggle play/pause
+      card.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+          if (video.paused) {
+            // Pause all other videos first
+            document.querySelectorAll('.video-card__video').forEach(v => {
+              if (v !== video) {
+                v.pause();
+                v.currentTime = 0;
+              }
+            });
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        }
+      });
+    });
+
+    // Filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        // Update active state
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const filter = chip.dataset.filter;
+        const cards = document.querySelectorAll('.video-card');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
