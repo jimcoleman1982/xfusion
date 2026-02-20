@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture | xFusion</title>
+  <meta name="description" content="Discover the culture behind xFusion's world-class teams. From living wages to virtual game nights, see how we build sticky, happy teams that love showing up every day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: #1A7A6D;
+      color: #FAFAF7;
+    }
+
+    :root {
+      --bg-primary: #FAFAF7;
+      --bg-alt: #F2F0EB;
+      --bg-card: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --accent-teal: #1A7A6D;
+      --accent-teal-light: #E8F5F2;
+      --accent-teal-dark: #145F55;
+      --accent-cta: #E8613A;
+      --accent-cta-hover: #D4522D;
+      --accent-cta-light: #FFF0EB;
+      --border-light: #E5E3DE;
+      --border-medium: #D1CFC8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,26,26,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+      --shadow-lg: 0 8px 32px rgba(26,26,26,0.10);
+      --max-width: 1140px;
+      --section-py: 100px;
+      --section-py-mobile: 64px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-teal-dark);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.01em; }
+    h4 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========================================
+       NAV (matched from main site)
+       ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
+      height: 72px;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav__logo span {
+      color: var(--accent-teal);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 42px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background-color: var(--accent-cta);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(232, 97, 58, 0.25);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--accent-cta-hover);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(232, 97, 58, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn--nav {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .culture-hero {
+      padding-top: 140px;
+      padding-bottom: 48px;
+      text-align: center;
+    }
+
+    .culture-hero h1 {
+      margin-bottom: 16px;
+    }
+
+    .culture-hero p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 8px;
+    }
+
+    .culture-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      margin-bottom: 24px;
+    }
+
+    .culture-hero__back:hover {
+      color: var(--accent-teal);
+    }
+
+    /* ========================================
+       STATS BAR
+       ======================================== */
+    .culture-stats {
+      background: var(--bg-alt);
+      padding: 48px 0;
+    }
+
+    .culture-stats__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      text-align: center;
+    }
+
+    .culture-stats__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .culture-stats__number {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--accent-teal);
+      line-height: 1.2;
+    }
+
+    .culture-stats__label {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ========================================
+       PHOTO/VIDEO MOSAIC
+       ======================================== */
+    .culture-mosaic {
+      padding: var(--section-py) 0;
+    }
+
+    .culture-mosaic h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .culture-mosaic > .container > p {
+      text-align: center;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 48px;
+    }
+
+    .culture-mosaic__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .culture-mosaic__item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .culture-mosaic__placeholder {
+      position: relative;
+      background: var(--bg-alt);
+      border: 2px dashed var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding-bottom: 75%;
+      overflow: hidden;
+    }
+
+    .culture-mosaic__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      color: var(--text-tertiary);
+    }
+
+    .culture-mosaic__caption {
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      text-align: center;
+    }
+
+    /* ========================================
+       VALUES CARDS
+       ======================================== */
+    .culture-values {
+      padding: var(--section-py) 0;
+      background: var(--bg-primary);
+    }
+
+    .culture-values h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .culture-values > .container > p {
+      text-align: center;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 0 auto 48px;
+    }
+
+    .culture-values__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .culture-values__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .culture-values__card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .culture-values__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .culture-values__icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-teal);
+    }
+
+    .culture-values__card h4 {
+      margin-bottom: 8px;
+    }
+
+    .culture-values__card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ========================================
+       TEAM TESTIMONIALS
+       ======================================== */
+    .culture-testimonials {
+      padding: var(--section-py) 0;
+      background: var(--bg-alt);
+    }
+
+    .culture-testimonials h2 {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .culture-testimonials__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .culture-testimonials__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .culture-testimonials__quote {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+    }
+
+    .culture-testimonials__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .culture-testimonials__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .culture-testimonials__avatar span {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .culture-testimonials__name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .culture-testimonials__role {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    /* ========================================
+       DAY IN THE LIFE VIDEO
+       ======================================== */
+    .culture-video {
+      padding: var(--section-py) 0;
+      background: var(--bg-primary);
+    }
+
+    .culture-video h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .culture-video > .container > p {
+      text-align: center;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .culture-video__wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .culture-video__placeholder {
+      position: relative;
+      background: var(--bg-alt);
+      border: 2px dashed var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding-bottom: 56.25%;
+      overflow: hidden;
+    }
+
+    .culture-video__play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      color: var(--text-tertiary);
+    }
+
+    .culture-video__caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      margin-top: 12px;
+    }
+
+    /* ========================================
+       CULTURE & ENGAGEMENT SERVICE CTA
+       ======================================== */
+    .culture-service {
+      padding: var(--section-py) 0;
+      background: var(--bg-alt);
+    }
+
+    .culture-service h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .culture-service > .container > p {
+      text-align: center;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 48px;
+    }
+
+    .culture-service__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .culture-service__checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .culture-service__checklist li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .culture-service__checklist svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent-teal);
+      flex-shrink: 0;
+    }
+
+    .culture-service__pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .culture-service__price {
+      font-family: 'Instrument Serif', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--accent-teal);
+      line-height: 1.1;
+    }
+
+    .culture-service__price-period {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    .culture-service__price-note {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+
+    /* ========================================
+       BOTTOM CTA SECTION
+       ======================================== */
+    .culture-bottom-cta {
+      text-align: center;
+      padding: var(--section-py) 0;
+    }
+
+    .culture-bottom-cta h2 {
+      margin-bottom: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .culture-bottom-cta p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========================================
+       FOOTER (matched from main site)
+       ======================================== */
+    .footer {
+      background-color: var(--bg-alt);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .footer__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .footer__logo span {
+      color: var(--accent-teal);
+    }
+
+    .footer__copy {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer__links a {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       RESPONSIVE - TABLET (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .culture-stats__inner {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .culture-mosaic__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .culture-values__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .culture-testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .culture-service__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - DESKTOP (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      :root {
+        --section-py: 120px;
+      }
+
+      .nav__toggle {
+        display: none !important;
+      }
+
+      .culture-values__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .culture-testimonials__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - MOBILE (<768px)
+       ======================================== */
+    @media (max-width: 767px) {
+      :root {
+        --section-py: var(--section-py-mobile);
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        padding: 20px 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav__links.open {
+        display: flex;
+      }
+
+      .nav__toggle {
+        display: block;
+      }
+
+      .culture-hero {
+        padding-top: 110px;
+      }
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-delay-1 { transition-delay: 0.1s; }
+      .fade-in-delay-2 { transition-delay: 0.2s; }
+      .fade-in-delay-3 { transition-delay: 0.3s; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">x<span>Fusion</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="candidate-videos.html">Meet the Talent</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="index.html#final-cta" class="btn btn--primary btn--nav">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="culture-hero">
+    <div class="container">
+      <a href="index.html" class="culture-hero__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to Home
+      </a>
+      <h1 class="fade-in">Culture Is Our Superpower</h1>
+      <p class="fade-in fade-in-delay-1">We believe the best talent stays where they feel valued. Here is how we build teams that love showing up every day.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="culture-stats">
+    <div class="container">
+      <div class="culture-stats__inner fade-in">
+        <div class="culture-stats__item">
+          <span class="culture-stats__number">90%+</span>
+          <span class="culture-stats__label">Team retention rate</span>
+        </div>
+        <div class="culture-stats__item">
+          <span class="culture-stats__number">6 Years</span>
+          <span class="culture-stats__label">Building world-class teams</span>
+        </div>
+        <div class="culture-stats__item">
+          <span class="culture-stats__number">15+</span>
+          <span class="culture-stats__label">Countries represented</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO/VIDEO MOSAIC -->
+  <section class="culture-mosaic">
+    <div class="container">
+      <h2 class="fade-in">Life at xFusion</h2>
+      <p class="fade-in fade-in-delay-1">From virtual game nights to surprise swag drops, our team knows how to celebrate wins together.</p>
+      <div class="culture-mosaic__grid">
+
+        <!-- Item 1: Video -->
+        <div class="culture-mosaic__item fade-in">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+              <polygon points="20,16 34,24 20,32" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Team virtual game night</span>
+        </div>
+
+        <!-- Item 2: Photo -->
+        <div class="culture-mosaic__item fade-in fade-in-delay-1">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+              <circle cx="36" cy="16" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Monthly birthday celebrations</span>
+        </div>
+
+        <!-- Item 3: Video -->
+        <div class="culture-mosaic__item fade-in fade-in-delay-2">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+              <polygon points="20,16 34,24 20,32" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Holiday gift unboxing</span>
+        </div>
+
+        <!-- Item 4: Photo -->
+        <div class="culture-mosaic__item fade-in">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+              <circle cx="36" cy="16" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Team building competition</span>
+        </div>
+
+        <!-- Item 5: Photo -->
+        <div class="culture-mosaic__item fade-in fade-in-delay-1">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+              <circle cx="36" cy="16" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Anniversary milestone recognition</span>
+        </div>
+
+        <!-- Item 6: Video -->
+        <div class="culture-mosaic__item fade-in fade-in-delay-2">
+          <div class="culture-mosaic__placeholder">
+            <svg class="culture-mosaic__icon" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+              <polygon points="20,16 34,24 20,32" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="culture-mosaic__caption">Behind the scenes at HQ</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES CARDS -->
+  <section class="culture-values">
+    <div class="container">
+      <h2 class="fade-in">What We Do Differently</h2>
+      <p class="fade-in fade-in-delay-1">Culture is not an afterthought. It is baked into everything we do.</p>
+      <div class="culture-values__grid">
+
+        <!-- Card 1: Birthday & Anniversary Gifting -->
+        <div class="culture-values__card fade-in">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <rect x="2" y="9" width="16" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="0.5" y="6" width="19" height="4" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="10" y1="6" x2="10" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 6C10 6 10 3 7.5 2C5 1 5 3.5 7 5C8.2 5.8 10 6 10 6Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M10 6C10 6 10 3 12.5 2C15 1 15 3.5 13 5C11.8 5.8 10 6 10 6Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <h4>Birthday and Anniversary Gifting</h4>
+          <p>Every team member gets recognized on their special days. Personalized gifts, not generic emails.</p>
+        </div>
+
+        <!-- Card 2: Contests & Competitions -->
+        <div class="culture-values__card fade-in fade-in-delay-1">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M6 17H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 14V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5 2H15V6C15 9.31 12.76 12 10 12C7.24 12 5 9.31 5 6V2Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 4H3C2.45 4 2 4.45 2 5V6C2 7.66 3.34 9 5 9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M15 4H17C17.55 4 18 4.45 18 5V6C18 7.66 16.66 9 15 9" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h4>Contests and Competitions</h4>
+          <p>Friendly challenges that bring the team together and reward top performers with real prizes.</p>
+        </div>
+
+        <!-- Card 3: Swag & Care Packages -->
+        <div class="culture-values__card fade-in fade-in-delay-2">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M3 7L10 2L17 7V16C17 16.55 16.55 17 16 17H4C3.45 17 3 16.55 3 16V7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M7 17V10H13V17" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="7" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h4>Swag and Care Packages</h4>
+          <p>Custom swag drops that make remote team members feel like they truly belong.</p>
+        </div>
+
+        <!-- Card 4: Holiday Celebrations -->
+        <div class="culture-values__card fade-in">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="8" r="1.5" fill="currentColor"/>
+              <path d="M10 2V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M6 4L7 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 4L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 10L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M3 14H17L15 18H5L3 14Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="10" y1="14" x2="10" y2="18" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h4>Holiday Celebrations</h4>
+          <p>Year-end bonuses, virtual holiday parties, and gifts that say "thank you for an incredible year."</p>
+        </div>
+
+        <!-- Card 5: Virtual Team Building -->
+        <div class="culture-values__card fade-in fade-in-delay-1">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <circle cx="7" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="13" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M1 17C1 14 3.5 12 7 12C8 12 8.9 12.2 9.7 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M19 17C19 14 16.5 12 13 12C12 12 11.1 12.2 10.3 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Virtual Team Building</h4>
+          <p>Regular game nights, trivia, and social events that build real friendships across time zones.</p>
+        </div>
+
+        <!-- Card 6: Living Wages -->
+        <div class="culture-values__card fade-in fade-in-delay-2">
+          <div class="culture-values__icon">
+            <svg viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 5V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12.5 7.5C12.5 7.5 11.5 6.5 10 6.5C8.5 6.5 7 7.5 7 9C7 10.5 8.5 11 10 11C11.5 11 13 11.5 13 13C13 14.5 11.5 15.5 10 15.5C8.5 15.5 7.5 14.5 7.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Living Wages, Not Lip Service</h4>
+          <p>We pay above-market rates because great talent deserves great compensation. Period.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM TESTIMONIALS -->
+  <section class="culture-testimonials">
+    <div class="container">
+      <h2 class="fade-in">Hear From the Team</h2>
+      <div class="culture-testimonials__grid">
+
+        <!-- Testimonial 1 -->
+        <div class="culture-testimonials__card fade-in">
+          <p class="culture-testimonials__quote">"Working at xFusion has been the most fulfilling chapter of my career. I have grown more here in two years than I did in five years at my previous company. The leadership genuinely invests in our development."</p>
+          <div class="culture-testimonials__author">
+            <div class="culture-testimonials__avatar"><span>JM</span></div>
+            <div>
+              <div class="culture-testimonials__name">Japs Mirasol</div>
+              <div class="culture-testimonials__role">Customer Success Lead</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="culture-testimonials__card fade-in fade-in-delay-1">
+          <p class="culture-testimonials__quote">"The camaraderie on this team is real. Even though we are spread across different countries, I feel closer to my colleagues here than at any office job I have had. The culture events make all the difference."</p>
+          <div class="culture-testimonials__author">
+            <div class="culture-testimonials__avatar"><span>MO</span></div>
+            <div>
+              <div class="culture-testimonials__name">Martin Onami</div>
+              <div class="culture-testimonials__role">Operations</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="culture-testimonials__card fade-in fade-in-delay-2">
+          <p class="culture-testimonials__quote">"I have never worked somewhere that celebrates every birthday, every anniversary, every small win. It sounds simple, but it makes you feel like you matter. That is why I have stayed for three years and counting."</p>
+          <div class="culture-testimonials__author">
+            <div class="culture-testimonials__avatar"><span>BD</span></div>
+            <div>
+              <div class="culture-testimonials__name">Bianca Dadulla</div>
+              <div class="culture-testimonials__role">Support Specialist</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY IN THE LIFE VIDEO -->
+  <section class="culture-video">
+    <div class="container">
+      <h2 class="fade-in">A Day in the Life</h2>
+      <p class="fade-in fade-in-delay-1">See what it is really like to be part of the xFusion team.</p>
+      <div class="culture-video__wrapper fade-in fade-in-delay-2">
+        <div class="culture-video__placeholder">
+          <svg class="culture-video__play-icon" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2.5"/>
+            <polygon points="26,20 46,32 26,44" fill="currentColor"/>
+          </svg>
+        </div>
+        <p class="culture-video__caption">Video coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE & ENGAGEMENT SERVICE CTA -->
+  <section class="culture-service">
+    <div class="container">
+      <h2 class="fade-in">Want This Culture for Your Team?</h2>
+      <p class="fade-in fade-in-delay-1">Our Culture and Engagement add-on brings the same energy, recognition, and connection to the team members we place with you.</p>
+      <div class="culture-service__inner fade-in fade-in-delay-2">
+
+        <!-- Left: Checklist -->
+        <ul class="culture-service__checklist">
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Virtual team-building events
+          </li>
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Birthday and anniversary gifting
+          </li>
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Custom swag and care packages
+          </li>
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Contests and friendly competitions
+          </li>
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Holiday bonuses and celebrations
+          </li>
+          <li>
+            <svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M7 11L10 14L15 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Ongoing engagement check-ins
+          </li>
+        </ul>
+
+        <!-- Right: Pricing Card -->
+        <div class="culture-service__pricing-card">
+          <div class="culture-service__price">$150<span class="culture-service__price-period">/mo</span></div>
+          <p class="culture-service__price-note">per team member</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="culture-bottom-cta">
+    <div class="container">
+      <h2 class="fade-in">Ready to Build a Team That Stays?</h2>
+      <p class="fade-in fade-in-delay-1">Book a 30-minute discovery call. We will show you how the right culture keeps the right people.</p>
+      <a href="index.html#final-cta" class="btn btn--primary fade-in fade-in-delay-2">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">x<span>Fusion</span></p>
+        <p class="footer__copy">&copy; 2026 xFusion. All rights reserved.</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', function() {
+      document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav__links');
+      var isOpen = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav__links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav__links').classList.remove('open');
+        document.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-in on scroll
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+  </script>
+
+</body>
+</html>
