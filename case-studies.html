@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies | xFusion</title>
+  <meta name="description" content="Real results from real clients. See how xFusion has helped SaaS founders and growing companies find unicorn talent that transforms their support and operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: #1A7A6D;
+      color: #FAFAF7;
+    }
+
+    :root {
+      --bg-primary: #FAFAF7;
+      --bg-alt: #F2F0EB;
+      --bg-card: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --accent-teal: #1A7A6D;
+      --accent-teal-light: #E8F5F2;
+      --accent-teal-dark: #145F55;
+      --accent-cta: #E8613A;
+      --accent-cta-hover: #D4522D;
+      --accent-cta-light: #FFF0EB;
+      --border-light: #E5E3DE;
+      --border-medium: #D1CFC8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,26,26,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+      --shadow-lg: 0 8px 32px rgba(26,26,26,0.10);
+      --max-width: 1140px;
+      --section-py: 100px;
+      --section-py-mobile: 64px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-teal-dark);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.01em; }
+
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========================================
+       NAV (matched from main site)
+       ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
+      height: 72px;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav__logo span {
+      color: var(--accent-teal);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 42px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background-color: var(--accent-cta);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(232, 97, 58, 0.25);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--accent-cta-hover);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(232, 97, 58, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn--nav {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .cs-hero {
+      padding-top: 140px;
+      padding-bottom: 48px;
+      text-align: center;
+    }
+
+    .cs-hero h1 {
+      margin-bottom: 16px;
+    }
+
+    .cs-hero p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 8px;
+    }
+
+    .cs-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      margin-bottom: 24px;
+    }
+
+    .cs-hero__back:hover {
+      color: var(--accent-teal);
+    }
+
+    /* ========================================
+       CASE STUDY GRID
+       ======================================== */
+    .cs-grid {
+      padding-bottom: var(--section-py);
+    }
+
+    .cs-grid__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    /* ========================================
+       CASE STUDY TILE
+       ======================================== */
+    .cs-tile {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .cs-tile:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .cs-tile__photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border-light);
+      flex-shrink: 0;
+    }
+
+    .cs-tile__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cs-tile__name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .cs-tile__company {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .cs-tile__pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 14px;
+      border-radius: 100px;
+      background: var(--accent-teal-light);
+      color: var(--accent-teal);
+      margin-top: 4px;
+    }
+
+    .cs-tile__metric {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      margin-top: 4px;
+    }
+
+    .cs-tile__arrow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent-cta);
+      margin-top: 4px;
+    }
+
+    .cs-tile__arrow svg {
+      transition: transform 0.2s ease;
+    }
+
+    .cs-tile:hover .cs-tile__arrow svg {
+      transform: translateX(3px);
+    }
+
+    /* ========================================
+       FULL CASE STUDY VIEW
+       ======================================== */
+    .cs-detail {
+      display: none;
+      padding-bottom: var(--section-py);
+    }
+
+    .cs-detail.active {
+      display: block;
+    }
+
+    .cs-detail__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      padding: 12px 0;
+      margin-bottom: 32px;
+      transition: color 0.2s ease;
+    }
+
+    .cs-detail__back:hover {
+      color: var(--accent-teal);
+    }
+
+    .cs-detail__header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .cs-detail__photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border-light);
+      flex-shrink: 0;
+    }
+
+    .cs-detail__header-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cs-detail__name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .cs-detail__company {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .cs-detail__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .cs-detail__badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 14px;
+      border-radius: 100px;
+    }
+
+    .cs-detail__badge--industry {
+      background: var(--accent-teal-light);
+      color: var(--accent-teal);
+    }
+
+    .cs-detail__badge--country {
+      background: var(--bg-alt);
+      color: var(--text-secondary);
+    }
+
+    /* Content sections */
+    .cs-detail__content {
+      max-width: 760px;
+    }
+
+    .cs-detail__section {
+      margin-bottom: 40px;
+    }
+
+    .cs-detail__section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-teal);
+      margin-bottom: 12px;
+    }
+
+    .cs-detail__section p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* Results metrics */
+    .cs-detail__metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .cs-detail__metric-card {
+      background: var(--accent-teal-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cs-detail__metric-value {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .cs-detail__metric-label {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.3;
+    }
+
+    /* Blockquote */
+    .cs-detail__quote {
+      background: var(--bg-alt);
+      border-left: 4px solid var(--accent-teal);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+
+    .cs-detail__quote p {
+      font-size: 1.0625rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .cs-detail__quote-author {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      font-style: normal;
+    }
+
+    /* Detail CTA */
+    .cs-detail__cta {
+      text-align: center;
+      padding: 48px 0 0;
+      border-top: 1px solid var(--border-light);
+      margin-top: 48px;
+    }
+
+    .cs-detail__cta h3 {
+      margin-bottom: 12px;
+    }
+
+    .cs-detail__cta p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========================================
+       BOTTOM CTA SECTION
+       ======================================== */
+    .cs-bottom-cta {
+      text-align: center;
+      padding-bottom: var(--section-py);
+    }
+
+    .cs-bottom-cta h2 {
+      margin-bottom: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cs-bottom-cta p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========================================
+       FOOTER (matched from main site)
+       ======================================== */
+    .footer {
+      background-color: var(--bg-alt);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .footer__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .footer__logo span {
+      color: var(--accent-teal);
+    }
+
+    .footer__copy {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer__links a {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       RESPONSIVE - TABLET (768px+)
+       ======================================== */
+    @media (min-width: 768px) {
+      .cs-grid__inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - DESKTOP (1024px+)
+       ======================================== */
+    @media (min-width: 1024px) {
+      :root {
+        --section-py: 120px;
+      }
+
+      .nav__toggle {
+        display: none !important;
+      }
+
+      .cs-grid__inner {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cs-detail__header {
+        gap: 32px;
+      }
+
+      .cs-detail__photo {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE - MOBILE (<768px)
+       ======================================== */
+    @media (max-width: 767px) {
+      :root {
+        --section-py: var(--section-py-mobile);
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        padding: 20px 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav__links.open {
+        display: flex;
+      }
+
+      .nav__toggle {
+        display: block;
+      }
+
+      .cs-hero {
+        padding-top: 110px;
+      }
+
+      .cs-tile {
+        padding: 24px 20px;
+      }
+
+      .cs-tile__photo {
+        width: 96px;
+        height: 96px;
+      }
+
+      .cs-detail__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .cs-detail__photo {
+        width: 80px;
+        height: 80px;
+      }
+
+      .cs-detail__name {
+        font-size: 1.2rem;
+      }
+
+      .cs-detail__quote {
+        padding: 20px 24px;
+      }
+
+      .cs-detail__metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cs-detail__metric-value {
+        font-size: 1.375rem;
+      }
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-delay-1 { transition-delay: 0.1s; }
+      .fade-in-delay-2 { transition-delay: 0.2s; }
+      .fade-in-delay-3 { transition-delay: 0.3s; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">x<span>Fusion</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#proof">Case Studies</a></li>
+        <li><a href="candidate-videos.html">Meet the Talent</a></li>
+        <li><a href="index.html#final-cta" class="btn btn--primary btn--nav">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="container">
+      <a href="index.html" class="cs-hero__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to Home
+      </a>
+      <h1 class="fade-in">Case Studies</h1>
+      <p class="fade-in fade-in-delay-1">Real results from real clients. See how xFusion has helped founders and growing companies find the talent that transformed their businesses.</p>
+    </div>
+  </section>
+
+  <!-- CASE STUDY GRID -->
+  <section class="cs-grid" id="cs-grid">
+    <div class="container">
+      <div class="cs-grid__inner">
+
+        <!-- Tile 1: Derrick Reimer / SavvyCal -->
+        <div class="cs-tile fade-in" data-cs="derrick-reimer">
+          <img src="images/derrick-reimer-savvycal.png" alt="Derrick Reimer" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Derrick Reimer</p>
+            <p class="cs-tile__company">SavvyCal</p>
+            <span class="cs-tile__pill">SaaS</span>
+          </div>
+          <p class="cs-tile__metric">84.79% faster response times</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 2: Claire Fundingsland / SkyFi -->
+        <div class="cs-tile fade-in fade-in-delay-1" data-cs="claire-fundingsland">
+          <img src="images/claire-fundingsland-skyfi.png" alt="Claire Fundingsland" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Claire Fundingsland</p>
+            <p class="cs-tile__company">SkyFi</p>
+            <span class="cs-tile__pill">SaaS</span>
+          </div>
+          <p class="cs-tile__metric">91.9% customer satisfaction</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 3: John Carbone / Bonify -->
+        <div class="cs-tile fade-in fade-in-delay-2" data-cs="john-carbone">
+          <img src="images/john-carbone-bonify.png" alt="John Carbone" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">John Carbone</p>
+            <p class="cs-tile__company">Bonify</p>
+            <span class="cs-tile__pill">SaaS / Shopify</span>
+          </div>
+          <p class="cs-tile__metric">Founder time on tickets dropped to under 5%</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 4: Dov Kaufmann / Tolstoy -->
+        <div class="cs-tile fade-in fade-in-delay-3" data-cs="dov-kaufmann">
+          <img src="images/dov-kaufmann-tolstoy.png" alt="Dov Kaufmann" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Dov Kaufmann</p>
+            <p class="cs-tile__company">Tolstoy</p>
+            <span class="cs-tile__pill">SaaS / Video Commerce</span>
+          </div>
+          <p class="cs-tile__metric">Shopify ranking up 90 points</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 5: Toby Marsden / Ordered Magic -->
+        <div class="cs-tile fade-in" data-cs="toby-marsden">
+          <img src="images/toby-marsden-ordered-magic.png" alt="Toby Marsden" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Toby Marsden</p>
+            <p class="cs-tile__company">Ordered Magic</p>
+            <span class="cs-tile__pill">SaaS / Shopify</span>
+          </div>
+          <p class="cs-tile__metric">100% customer happiness score</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 6: Marcelo Olivera / Revy -->
+        <div class="cs-tile fade-in fade-in-delay-1" data-cs="marcelo-olivera">
+          <img src="images/marcelo-olivera-revy.png" alt="Marcelo Olivera" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Marcelo Olivera</p>
+            <p class="cs-tile__company">Revy</p>
+            <span class="cs-tile__pill">SaaS / Shopify</span>
+          </div>
+          <p class="cs-tile__metric">Hundreds of new 5-star reviews</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+        <!-- Tile 7: Tom Foster / TheReceptionist -->
+        <div class="cs-tile fade-in fade-in-delay-2" data-cs="tom-foster">
+          <img src="images/tom-foster-thereceptionist.png" alt="Tom Foster" class="cs-tile__photo">
+          <div class="cs-tile__info">
+            <p class="cs-tile__name">Tom Foster</p>
+            <p class="cs-tile__company">TheReceptionist</p>
+            <span class="cs-tile__pill">SaaS</span>
+          </div>
+          <p class="cs-tile__metric">98.9% CSAT rating</p>
+          <span class="cs-tile__arrow">Read the story <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="13" y2="8"/><line x1="9" y1="4" x2="13" y2="8"/><line x1="9" y1="12" x2="13" y2="8"/></svg></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Derrick Reimer / SavvyCal -->
+  <section class="cs-detail" id="cs-derrick-reimer">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/derrick-reimer-savvycal.png" alt="Derrick Reimer" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Derrick Reimer</h2>
+          <p class="cs-detail__company">SavvyCal</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS</span>
+            <span class="cs-detail__badge cs-detail__badge--country">USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>Derrick needed a partner he could trust to find dedicated support reps as an extension of his team. As a solo founder busy building and marketing his product, he was stretched thin. He was also skeptical of outsourcing at first, unsure whether an outside placement could truly feel like part of the SavvyCal team.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed a dedicated support team member who embedded directly into SavvyCal's daily workflow. This person handled tickets, managed escalations, and even provided synchronous video support to customers, allowing Derrick to step back from day-to-day support entirely and focus on product development.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">84.79%</p>
+              <p class="cs-detail__metric-label">Faster response times</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Seamless</p>
+              <p class="cs-detail__metric-label">Team integration</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Video</p>
+              <p class="cs-detail__metric-label">Synchronous support added</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"As a founder busy building and marketing my product, I needed a partner I could trust to find and manage dedicated support reps as an extension of my team. They've freed me up to focus on running the business while keeping my customers well-supported."</p>
+          <cite class="cs-detail__quote-author">Derrick Reimer, Founder of SavvyCal</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Derrick's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Claire Fundingsland / SkyFi -->
+  <section class="cs-detail" id="cs-claire-fundingsland">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/claire-fundingsland-skyfi.png" alt="Claire Fundingsland" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Claire Fundingsland</h2>
+          <p class="cs-detail__company">SkyFi</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS</span>
+            <span class="cs-detail__badge cs-detail__badge--country">USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>SkyFi, a satellite imagery company serving 20,000+ accounts across 185 countries, needed to scale their support operations. Their product required specialized technical knowledge of Earth observation technology, and they needed global 24/7 coverage to serve customers in every time zone.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed a team of specialists who quickly built deep expertise in SkyFi's Earth observation technology. The team handled complex technical queries across time zones, providing thorough and customer-centric support that matched SkyFi's own standards for quality.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">91.9%</p>
+              <p class="cs-detail__metric-label">Customer satisfaction (CSAT)</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">33 min</p>
+              <p class="cs-detail__metric-label">Median first reply time</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">185</p>
+              <p class="cs-detail__metric-label">Countries served</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"I am so impressed with our xFusion team's thoroughness and their ability to adapt and learn quickly. They never leave a customer interaction unresolved and are always quick to alert us for potential opportunities."</p>
+          <cite class="cs-detail__quote-author">Claire Fundingsland, SkyFi</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Claire's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: John Carbone / Bonify -->
+  <section class="cs-detail" id="cs-john-carbone">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/john-carbone-bonify.png" alt="John Carbone" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">John Carbone</h2>
+          <p class="cs-detail__company">Bonify</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS / Shopify</span>
+            <span class="cs-detail__badge cs-detail__badge--country">USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>Bonify had just transitioned from web to app development and faced a surge in complex support tickets. The founders were drowning in day-to-day support instead of building product, spending the majority of their time replying to customer issues rather than developing new features.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed dedicated team members with strong technical skills who fully immersed themselves in Bonify's product ecosystem. They handled live chat and email support, learning the product deeply enough to resolve complex issues without escalation.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">&lt; 5%</p>
+              <p class="cs-detail__metric-label">Founder ticket involvement</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">51.43%</p>
+              <p class="cs-detail__metric-label">Faster response times</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">4.9</p>
+              <p class="cs-detail__metric-label">Shopify satisfaction score</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">26,000+</p>
+              <p class="cs-detail__metric-label">Tickets handled</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"They found us the perfect reps with complete alignment to our mission. I forget that they're technically not in-house employees, they truly are part of the Bonify team."</p>
+          <cite class="cs-detail__quote-author">John Carbone, Founder of Bonify</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like John's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Dov Kaufmann / Tolstoy -->
+  <section class="cs-detail" id="cs-dov-kaufmann">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/dov-kaufmann-tolstoy.png" alt="Dov Kaufmann" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Dov Kaufmann</h2>
+          <p class="cs-detail__company">Tolstoy</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS / Video Commerce</span>
+            <span class="cs-detail__badge cs-detail__badge--country">Israel</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>Tolstoy, a fast-growing video commerce platform, needed to scale their support and customer success operations without losing quality. As the company grew rapidly, they needed team members who could handle technical support while also proactively driving customer engagement and retention.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed support and success team members who integrated with Tolstoy's systems. Beyond handling technical support, these team members proactively drove app store reviews and helped maintain high customer satisfaction during a period of rapid growth.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">+90</p>
+              <p class="cs-detail__metric-label">Shopify ranking increase</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Surge</p>
+              <p class="cs-detail__metric-label">5-star reviews generated</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Scaled</p>
+              <p class="cs-detail__metric-label">Multiple FT & PT placements</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"The xFusion team has been an absolute game-changer for Tolstoy. Working with them has enabled us to grow faster and more professionally than we ever could have alone."</p>
+          <cite class="cs-detail__quote-author">Dov Kaufmann, Tolstoy</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Dov's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Toby Marsden / Ordered Magic -->
+  <section class="cs-detail" id="cs-toby-marsden">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/toby-marsden-ordered-magic.png" alt="Toby Marsden" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Toby Marsden</h2>
+          <p class="cs-detail__company">Ordered Magic</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS / Shopify</span>
+            <span class="cs-detail__badge cs-detail__badge--country">France</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>Toby was managing four different Shopify apps entirely on his own, handling customer support seven days a week. He needed technical specialists who understood HTML, CSS, JavaScript, and Shopify Liquid, not just general support reps.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed a technical specialist, then expanded to a team of three. They handled tier-1 and tier-2 issues, managed escalations, and proactively gathered customer feedback. Their deep technical skills meant they could resolve complex Shopify Liquid and front-end issues without escalation.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">100%</p>
+              <p class="cs-detail__metric-label">Customer happiness score</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Hundreds</p>
+              <p class="cs-detail__metric-label">New 5-star reviews</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Major</p>
+              <p class="cs-detail__metric-label">App improvements shipped</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"The entire way that we're thinking about the future now is different because of the experience that we've had working with you at xFusion."</p>
+          <cite class="cs-detail__quote-author">Toby Marsden, Founder of Ordered Magic</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Toby's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Marcelo Olivera / Revy -->
+  <section class="cs-detail" id="cs-marcelo-olivera">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/marcelo-olivera-revy.png" alt="Marcelo Olivera" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Marcelo Olivera</h2>
+          <p class="cs-detail__company">Revy</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS / Shopify</span>
+            <span class="cs-detail__badge cs-detail__badge--country">Brazil</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>Marcelo was the sole founder handling all support for 10,000+ merchants, leaving zero time for development. English as a second language added friction to every customer interaction, making it even harder to keep up with the volume of requests pouring in daily.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion placed a dedicated specialist with strong technical skills to handle tier-2 support. This team member also drove a review generation strategy, proactively encouraging satisfied customers to leave feedback on the Shopify app store.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">Hundreds</p>
+              <p class="cs-detail__metric-label">New 5-star reviews</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">100%</p>
+              <p class="cs-detail__metric-label">Customer happiness score</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">78%</p>
+              <p class="cs-detail__metric-label">Resolved on first reply</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"Customer support is one of our app's strengths and it's praised daily by our customers. It's been worth every penny to put the support of my apps in their skilled agent's hands."</p>
+          <cite class="cs-detail__quote-author">Marcelo Olivera, Founder of Revy</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Marcelo's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CASE STUDY: Tom Foster / TheReceptionist -->
+  <section class="cs-detail" id="cs-tom-foster">
+    <div class="container">
+      <button class="cs-detail__back" onclick="showGrid()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="10" y1="3" x2="5" y2="8"/><line x1="5" y1="8" x2="10" y2="13"/></svg>
+        Back to all case studies
+      </button>
+      <div class="cs-detail__header">
+        <img src="images/tom-foster-thereceptionist.png" alt="Tom Foster" class="cs-detail__photo">
+        <div class="cs-detail__header-info">
+          <h2 class="cs-detail__name">Tom Foster</h2>
+          <p class="cs-detail__company">TheReceptionist</p>
+          <div class="cs-detail__badges">
+            <span class="cs-detail__badge cs-detail__badge--industry">SaaS</span>
+            <span class="cs-detail__badge cs-detail__badge--country">USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-detail__content">
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Challenge</p>
+          <p>TheReceptionist needed to scale their support team while maintaining their unique "Employee Supremacy" culture and extremely high service standards. They were concerned that bringing on outside talent could dilute the values and quality their customers had come to expect.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Solution</p>
+          <p>xFusion found team members who aligned with TheReceptionist's culture and values from day one. These placements integrated seamlessly, becoming true extensions of the company rather than feeling like outside additions. Over the course of five years, the partnership expanded to multiple positions.</p>
+        </div>
+        <div class="cs-detail__section">
+          <p class="cs-detail__section-title">The Results</p>
+          <div class="cs-detail__metrics">
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">98.9%</p>
+              <p class="cs-detail__metric-label">Customer satisfaction (CSAT)</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">1.5 hr</p>
+              <p class="cs-detail__metric-label">Average response time</p>
+            </div>
+            <div class="cs-detail__metric-card">
+              <p class="cs-detail__metric-value">5 years</p>
+              <p class="cs-detail__metric-label">Ongoing partnership</p>
+            </div>
+          </div>
+        </div>
+        <blockquote class="cs-detail__quote">
+          <p>"We were immediately struck by their values and commitment to helping their employees, which meshed with our values completely. Over the past five years of working with xFusion, we have brought on multiple positions and see no reason to stop."</p>
+          <cite class="cs-detail__quote-author">Tom Foster, TheReceptionist</cite>
+        </blockquote>
+        <div class="cs-detail__cta">
+          <h3>Want results like Tom's?</h3>
+          <p>Book a discovery call and let us find the right talent for your team.</p>
+          <a href="index.html#final-cta" class="btn btn--primary">Book a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="cs-bottom-cta" id="cs-bottom-cta">
+    <div class="container">
+      <h2 class="fade-in">Ready to write your own success story?</h2>
+      <p class="fade-in fade-in-delay-1">Book a 30-minute discovery call. We will learn what you need and start your talent search within days.</p>
+      <a href="index.html#final-cta" class="btn btn--primary fade-in fade-in-delay-2">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">x<span>Fusion</span></p>
+        <p class="footer__copy">&copy; 2026 xFusion. All rights reserved.</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', function() {
+      document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      var links = document.querySelector('.nav__links');
+      var isOpen = links.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav__links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav__links').classList.remove('open');
+        document.querySelector('.nav__toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-in on scroll
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+
+    // --- Case Study Grid / Detail Toggle ---
+    var grid = document.getElementById('cs-grid');
+    var bottomCta = document.getElementById('cs-bottom-cta');
+    var allDetails = document.querySelectorAll('.cs-detail');
+
+    // Show the full case study, hide grid
+    function showCaseStudy(id) {
+      grid.style.display = 'none';
+      bottomCta.style.display = 'none';
+      allDetails.forEach(function(d) { d.classList.remove('active'); });
+      var target = document.getElementById('cs-' + id);
+      if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Show grid, hide case study
+    function showGrid() {
+      allDetails.forEach(function(d) { d.classList.remove('active'); });
+      grid.style.display = '';
+      bottomCta.style.display = '';
+      window.scrollTo({ top: grid.offsetTop - 100, behavior: 'smooth' });
+    }
+
+    // Tile click handlers
+    document.querySelectorAll('.cs-tile').forEach(function(tile) {
+      tile.addEventListener('click', function() {
+        var id = tile.getAttribute('data-cs');
+        showCaseStudy(id);
+      });
+    });
+
+    // Handle browser back/forward with hash
+    function checkHash() {
+      var hash = window.location.hash.replace('#', '');
+      if (hash && hash.startsWith('cs-')) {
+        showCaseStudy(hash.replace('cs-', ''));
+      }
+    }
+
+    window.addEventListener('hashchange', checkHash);
+  </script>
+
+</body>
+</html>
