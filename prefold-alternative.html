@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>xFusion | Pre-Fold Alternative (Hormozi Framework)</title>
-  <meta name="description" content="Pre-fold alternative mockup applying Alex Hormozi's $100M Offer value equation to the xFusion hero section.">
+  <title>xFusion | Pre-Fold Alternative (Hormozi A/B/C/D Formula)</title>
+  <meta name="description" content="Pre-fold alternative mockup applying Alex Hormozi's offer articulation formula: I solve A for B without C with D guarantee.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -324,101 +324,45 @@
     }
 
     .hero__deck {
-      max-width: 640px;
+      max-width: 680px;
       font-size: 1.125rem;
       color: var(--text-secondary);
-      margin-bottom: 12px;
+      margin-bottom: 32px;
       line-height: 1.75;
     }
 
-    /* --- Stats strip (Perceived Likelihood + Time Delay) --- */
-    .hero__stats {
+    /* --- A/B/C/D Formula Breakdown --- */
+    .hero__formula {
       display: grid;
-      grid-template-columns: repeat(3, auto);
-      gap: 0;
-      max-width: 600px;
-      margin-bottom: 36px;
-      padding: 20px 0;
-      border-top: 1px solid var(--border-light);
-      border-bottom: 1px solid var(--border-light);
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 700px;
+      margin-bottom: 40px;
     }
 
-    .hero__stat {
-      text-align: center;
-      padding: 0 24px;
-      position: relative;
+    .hero__formula-item {
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      border-left: 3px solid var(--accent-teal);
     }
 
-    .hero__stat:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 4px;
-      bottom: 4px;
-      width: 1px;
-      background: var(--border-light);
-    }
-
-    .hero__stat-value {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: var(--accent-teal);
-      line-height: 1.2;
-      margin-bottom: 2px;
-    }
-
-    .hero__stat-label {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--text-tertiary);
-      line-height: 1.3;
-      margin-bottom: 0;
-    }
-
-    /* --- 3-step mini flow (Effort & Sacrifice) --- */
-    .hero__steps {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      max-width: 640px;
-      margin-bottom: 36px;
-    }
-
-    .hero__step {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 1;
-    }
-
-    .hero__step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      min-width: 28px;
-      border-radius: 50%;
-      background: var(--accent-teal-light);
-      color: var(--accent-teal);
-      font-size: 0.8125rem;
+    .hero__formula-label {
+      display: block;
+      font-size: 0.75rem;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-teal);
+      margin-bottom: 6px;
     }
 
-    .hero__step-text {
-      font-size: 0.9rem;
-      font-weight: 500;
+    .hero__formula-text {
+      font-size: 0.925rem;
       color: var(--text-secondary);
-      line-height: 1.4;
+      line-height: 1.55;
       margin-bottom: 0;
-    }
-
-    .hero__step-arrow {
-      color: var(--border-medium);
-      font-size: 1.125rem;
-      margin: 0 2px;
-      align-self: center;
     }
 
     /* --- CTA area --- */
@@ -429,25 +373,8 @@
     .hero__subtext {
       font-size: 0.875rem;
       color: var(--text-tertiary);
-      margin-bottom: 20px;
-      max-width: 520px;
-    }
-
-    .hero__risk {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent-teal-light);
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--accent-teal);
       margin-bottom: 40px;
-    }
-
-    .hero__risk svg {
-      flex-shrink: 0;
+      max-width: 520px;
     }
 
     /* --- Micro-testimonial (Perceived Likelihood) --- */
@@ -677,8 +604,8 @@
        RESPONSIVE — TABLET (768px+)
        ======================================== */
     @media (min-width: 768px) {
-      .hero__steps {
-        gap: 16px;
+      .hero__formula {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -733,31 +660,8 @@
         padding-top: 110px;
       }
 
-      .hero__stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-        max-width: 100%;
-      }
-
-      .hero__stat {
-        padding: 0 12px;
-      }
-
-      .hero__stat-value {
-        font-size: 1.375rem;
-      }
-
-      .hero__stat-label {
-        font-size: 0.75rem;
-      }
-
-      .hero__steps {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .hero__step-arrow {
-        display: none;
+      .hero__formula {
+        grid-template-columns: 1fr;
       }
 
       .hero__trust-logos {
@@ -832,80 +736,57 @@
   </nav>
 
   <!-- ========================================
-       HERO — HORMOZI VALUE EQUATION
+       HERO — HORMOZI OFFER ARTICULATION
+       "I solve [A] for [B] without [C] with [D]"
        ======================================== -->
   <section id="hero" class="hero">
     <div class="container">
 
-      <!-- PREHEAD: Speed (Time Delay) -->
-      <p class="hero__prehead fade-in">Vetted international talent, placed in ~14 days</p>
+      <!-- PREHEAD: [B] Audience callout -->
+      <p class="hero__prehead fade-in">For business owners ready to stop wearing every hat</p>
 
-      <!-- H1: Dream Outcome -->
-      <h1 class="hero__headline fade-in fade-in-delay-1">Your next hire handles the chaos<br>so you can focus on growth.</h1>
+      <!-- H1: The full A/B/C/D formula as headline -->
+      <h1 class="hero__headline fade-in fade-in-delay-1">We place dedicated team members who stay,<br>without the bad hires, the turnover, or the guesswork.</h1>
 
-      <!-- SUBHEAD: Low Effort + What we do -->
-      <p class="hero__deck fade-in fade-in-delay-2">Tell us the role. We find, vet, and shortlist dedicated team members using our proprietary TraitX framework. You review video interviews and pick your favorite. Building loyal, happy teams since 2020.</p>
+      <!-- SUBHEAD: Expand on the formula naturally -->
+      <p class="hero__deck fade-in fade-in-delay-2">xFusion finds, vets, and places international talent for growing companies. You get a shortlist of candidates with video interviews in about 14 days. No sifting through hundreds of applicants. No training someone who leaves in three months. And if we don't deliver, your deposit is fully refunded.</p>
 
-      <!-- STAT STRIP: Perceived Likelihood -->
-      <div class="hero__stats fade-in fade-in-delay-3">
-        <div class="hero__stat">
-          <p class="hero__stat-value">350+</p>
-          <p class="hero__stat-label">Placements made</p>
+      <!-- A/B/C/D FORMULA BREAKDOWN — visual, scannable -->
+      <div class="hero__formula fade-in fade-in-delay-3">
+        <div class="hero__formula-item">
+          <span class="hero__formula-label">The problem we solve</span>
+          <p class="hero__formula-text">You need skilled, reliable people but hiring is slow, expensive, and full of bad fits.</p>
         </div>
-        <div class="hero__stat">
-          <p class="hero__stat-value">90%+</p>
-          <p class="hero__stat-label">Team retention</p>
+        <div class="hero__formula-item">
+          <span class="hero__formula-label">Who we serve</span>
+          <p class="hero__formula-text">Business owners and operators who are stretched too thin doing work someone else should own.</p>
         </div>
-        <div class="hero__stat">
-          <p class="hero__stat-value">60-70%</p>
-          <p class="hero__stat-label">Savings vs. US hires</p>
+        <div class="hero__formula-item">
+          <span class="hero__formula-label">Without the headaches</span>
+          <p class="hero__formula-text">No months-long recruiting cycles. No unvetted candidates. No turnover treadmill. We handle the entire pipeline.</p>
         </div>
-      </div>
-
-      <!-- 3-STEP MINI FLOW: Effort & Sacrifice -->
-      <div class="hero__steps fade-in fade-in-delay-4">
-        <div class="hero__step">
-          <span class="hero__step-num">1</span>
-          <p class="hero__step-text">Tell us the role</p>
-        </div>
-        <span class="hero__step-arrow">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
-        </span>
-        <div class="hero__step">
-          <span class="hero__step-num">2</span>
-          <p class="hero__step-text">Review your shortlist</p>
-        </div>
-        <span class="hero__step-arrow">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
-        </span>
-        <div class="hero__step">
-          <span class="hero__step-num">3</span>
-          <p class="hero__step-text">Make the hire</p>
+        <div class="hero__formula-item">
+          <span class="hero__formula-label">With this guarantee</span>
+          <p class="hero__formula-text">$500 fully refundable deposit. Candidate shortlist in ~14 days. 90%+ retention across 350+ placements over 6 years.</p>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="hero__cta-group fade-in fade-in-delay-5">
+      <div class="hero__cta-group fade-in fade-in-delay-4">
         <a href="#" class="btn btn--primary">Book a Discovery Call</a>
       </div>
 
-      <!-- Sub-CTA: Low friction + Risk Reversal -->
-      <p class="hero__subtext fade-in fade-in-delay-5">30 minutes with our founding team. No commitment. No credit card.</p>
+      <!-- Sub-CTA -->
+      <p class="hero__subtext fade-in fade-in-delay-4">30 minutes with our founding team. No commitment. No credit card.</p>
 
-      <!-- Risk Reversal Badge -->
-      <div class="hero__risk fade-in fade-in-delay-5">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        $500 fully refundable deposit to start a search. If we don't deliver, you pay nothing.
-      </div>
-
-      <!-- MICRO-TESTIMONIAL: Perceived Likelihood -->
-      <div class="hero__testimonial fade-in fade-in-delay-6">
+      <!-- MICRO-TESTIMONIAL: Proof it works -->
+      <div class="hero__testimonial fade-in fade-in-delay-5">
         <p class="hero__testimonial-quote">"Within two weeks we had three incredible candidates. Our hire has been with us over two years and feels like part of our core team."</p>
         <p class="hero__testimonial-attr">Claire Fundingsland <span>/ SkyFi</span></p>
       </div>
 
       <!-- TRUSTED BY -->
-      <div class="hero__trust fade-in fade-in-delay-6">
+      <div class="hero__trust fade-in fade-in-delay-5">
         <p class="hero__trust-label">Trusted by</p>
         <div class="hero__trust-logos">
           <span>Tolstoy</span><span class="sep">&middot;</span>
@@ -928,7 +809,7 @@
     <div class="container">
       <div class="compare__header fade-in">
         <h2>What changed and why</h2>
-        <p>Here is how the Hormozi value equation maps to the new hero layout. Each element targets a specific lever.</p>
+        <p>David cited the Hormozi offer articulation formula: "I solve [A problem] for [B audience] without [C headaches] and with [D guarantee]." Here is how the new hero maps to that formula.</p>
       </div>
       <div class="compare__grid">
 
@@ -938,58 +819,42 @@
           <ul class="compare__list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              Leads with pain ("You're the bottleneck")
+              Leads with pain but never states the problem we solve
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              Dream outcome buried in paragraph copy
+              Audience is implied, never explicitly called out
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              "14 days" hidden in the middle of the deck
+              Headaches we eliminate are not mentioned
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              No social proof stats above the fold
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              $500 deposit not mentioned in hero
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              No client testimonial or proof above the fold
+              No guarantee or risk reversal in the hero
             </li>
           </ul>
         </div>
 
         <!-- NEW -->
         <div class="compare__card compare__card--new fade-in fade-in-delay-1">
-          <p class="compare__card-title">Hormozi Framework Hero</p>
+          <p class="compare__card-title">Hormozi A/B/C/D Formula</p>
           <ul class="compare__list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Dream Outcome</strong> in the headline: focus on growth
+              <strong>[A] Problem:</strong> Headline states what we solve: team members who stay, no bad hires
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Perceived Likelihood</strong>: 350+ placements, 90%+ retention, client quote
+              <strong>[B] Audience:</strong> Prehead directly calls out "business owners ready to stop wearing every hat"
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Time Delay</strong>: "~14 days" elevated to the prehead
+              <strong>[C] Without:</strong> "No sifting through applicants. No training someone who leaves in three months."
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Effort</strong>: 3-step mini flow shows simplicity
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Risk Reversal</strong>: "$500 fully refundable" badge
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <strong>Social Proof</strong>: stats strip + micro-testimonial + logos
+              <strong>[D] Guarantee:</strong> "$500 fully refundable. ~14 days. 90%+ retention across 350+ placements."
             </li>
           </ul>
         </div>
@@ -1016,7 +881,7 @@
 
   <!-- MOCKUP LABEL -->
   <div class="mockup-banner">
-    MOCKUP: Pre-Fold Alternative (Hormozi Framework) &mdash; <a href="index.html">View current version</a>
+    MOCKUP: Pre-Fold Alternative (Hormozi A/B/C/D Formula) &mdash; <a href="index.html">View current version</a>
   </div>
 
   <!-- ========================================
