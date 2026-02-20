@@ -1344,7 +1344,7 @@
     var bottomCta = document.getElementById('cs-bottom-cta');
     var allDetails = document.querySelectorAll('.cs-detail');
 
-    // Show the full case study, hide grid
+    // Show the full case study, hide grid (no history push)
     function showCaseStudy(id) {
       grid.style.display = 'none';
       bottomCta.style.display = 'none';
@@ -1356,7 +1356,7 @@
       }
     }
 
-    // Show grid, hide case study
+    // Show grid, hide case study (no history push)
     function showGrid() {
       allDetails.forEach(function(d) { d.classList.remove('active'); });
       grid.style.display = '';
@@ -1364,23 +1364,40 @@
       window.scrollTo({ top: grid.offsetTop - 100, behavior: 'smooth' });
     }
 
-    // Tile click handlers
+    // Tile click handlers -- push history so browser back works
     document.querySelectorAll('.cs-tile').forEach(function(tile) {
       tile.addEventListener('click', function() {
         var id = tile.getAttribute('data-cs');
+        history.pushState({ view: 'detail', cs: id }, '', '#cs-' + id);
         showCaseStudy(id);
       });
     });
 
-    // Handle browser back/forward with hash
-    function checkHash() {
+    // Back button inside detail views -- push grid state so forward also works
+    document.querySelectorAll('.cs-detail__back').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        history.pushState({ view: 'grid' }, '', window.location.pathname);
+        showGrid();
+      });
+    });
+
+    // Handle browser back/forward button
+    window.addEventListener('popstate', function(e) {
+      if (e.state && e.state.view === 'detail' && e.state.cs) {
+        showCaseStudy(e.state.cs);
+      } else {
+        showGrid();
+      }
+    });
+
+    // Handle direct link with hash on page load
+    (function() {
       var hash = window.location.hash.replace('#', '');
       if (hash && hash.startsWith('cs-')) {
         showCaseStudy(hash.replace('cs-', ''));
       }
-    }
-
-    window.addEventListener('hashchange', checkHash);
+    })();
   </script>
 
 </body>
